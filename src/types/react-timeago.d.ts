@@ -1,10 +1,11 @@
-declare module "react-timeago" {
-  export = react_timeago;
+declare module "react_timeago" {
+  import React from "react";
 
   interface Props {
     date: string;
     className: string;
   }
 
-  function react_timeago(): React.Component<Props>;
+  const TimeAgo: React.StatelessComponent<Props>;
+  export default TimeAgo;
 }
