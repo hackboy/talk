@@ -1,3 +1,4 @@
 .root {
-  padding: 5px 20px;
+  composes: button from "talk-ui/shared/typography.css";
+  background-color: transparent;
 }

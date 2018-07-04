@@ -12,7 +12,8 @@ interface InnerProps {
 
 class Timestamp extends React.Component<InnerProps> {
   public render() {
-    return <TimeAgo date={this.props.date} />;
+    const { date, classes } = this.props;
+    return <TimeAgo date={date} className={classes.root} />;
   }
 }
 
