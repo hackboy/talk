@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders future date 1`] = `
+<time
+  className="root"
+  dateTime="2108-12-17T06:24:00.000Z"
+  title="2108-12-17T06:24:00.000Z"
+>
+  91 years from now
+</time>
+`;
+
+exports[`renders old date 1`] = `
+<time
+  className="root"
+  dateTime="1995-12-17T06:24:00.000Z"
+  title="1995-12-17T06:24:00.000Z"
+>
+  23 years ago
+</time>
+`;

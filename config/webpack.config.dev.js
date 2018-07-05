@@ -161,18 +161,18 @@ module.exports = {
                   pathToLocales: paths.appLocales,
 
                   // Default locale if non could be negotiated.
-                  defaultLocale: "es",
+                  defaultLocale: "en-US",
 
                   // Fallback locale if a translation was not found.
                   // If not set, will use the text that is already
                   // in the code base.
-                  fallbackLocale: "es",
+                  fallbackLocale: "en-US",
 
                   // Common fluent files are always included in the locale bundles.
                   commonFiles: ["framework.ftl", "common.ftl"],
 
                   // Locales that come with the main bundle. Others are loaded on demand.
-                  bundled: ["es"],
+                  bundled: ["en-US"],
 
                   // Target specifies the prefix for fluent files to be loaded.
                   // ${target}-xyz.ftl and ${†arget}.ftl are loaded into the locales.
@@ -180,7 +180,7 @@ module.exports = {
 
                   // All available locales can be loadable on demand.
                   // To restrict available locales set:
-                  availableLocales: ["es"],
+                  availableLocales: ["en-US"],
                 },
               },
             ],
