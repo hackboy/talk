@@ -1,8 +1,9 @@
+import { Localized } from "fluent-react/compat";
 import { noop } from "lodash";
+import React from "react";
 import { Formatter } from "react-timeago";
 import { Environment, Network, RecordSource, Store } from "relay-runtime";
 
-import { Localized } from "fluent-react/compat";
 import { generateMessages, LocalesData, negotiateLanguages } from "../i18n";
 import { fetchQuery } from "../network";
 import { TalkContext } from "./TalkContext";
@@ -20,7 +21,12 @@ interface CreateContextArguments {
 
 export const timeagoFormatter: Formatter = (value, unit, suffix) => {
   return (
-    <Localized id="timeago">
+    <Localized
+      id="framework-timeago"
+      $value={value}
+      $unit={unit}
+      $suffix={suffix}
+    >
       <span>now</span>
     </Localized>
   );

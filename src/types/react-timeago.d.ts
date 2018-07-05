@@ -6,7 +6,7 @@ declare module "react-timeago" {
     unit: "second" | "minute" | "hour" | "day" | "week" | "month" | "year",
     suffix: "ago" | "from now",
     epochMiliseconds?: string
-  ) => string;
+  ) => string | React.ReactElement<any>;
 
   export interface LocaleDefinition {
     prefixAgo?: string;
