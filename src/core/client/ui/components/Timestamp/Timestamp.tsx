@@ -17,7 +17,6 @@ interface InnerProps {
 class Timestamp extends React.Component<InnerProps> {
   public render() {
     const { date, classes, live } = this.props;
-    // console.log(formatter(5, "minute", "ago"));
     return (
       <TimeAgo
         date={date}
