@@ -1,4 +1,4 @@
-declare module "react_timeago" {
+declare module "react-timeago" {
   import React from "react";
 
   interface Props {
@@ -6,6 +6,6 @@ declare module "react_timeago" {
     className: string;
   }
 
-  const TimeAgo: React.StatelessComponent<Props>;
+  function TimeAgo(): React.Component<Props>;
   export default TimeAgo;
 }

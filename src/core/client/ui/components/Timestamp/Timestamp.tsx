@@ -1,5 +1,6 @@
 import React from "react";
 import TimeAgo from "react-timeago";
+
 import { withStyles } from "talk-ui/hocs";
 import { PropTypesOf } from "talk-ui/types";
 
