@@ -8,6 +8,7 @@ it("renders username and body", () => {
       username: "Marvin",
     },
     body: "Woof",
+    createdAt: new Date().toISOString(),
   };
   const renderer = createRenderer();
   renderer.render(<Comment {...props} />);
@@ -20,6 +21,7 @@ it("renders with gutterBottom", () => {
       username: "Marvin",
     },
     body: "Woof",
+    createdAt: new Date().toISOString(),
     gutterBottom: true,
   };
   const renderer = createRenderer();

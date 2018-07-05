@@ -1,26 +1,6 @@
 import "fluent-intl-polyfill/compat";
 import { negotiateLanguages as negotiate } from "fluent-langneg/compat";
 import { MessageContext } from "fluent/compat";
-import buildFormatter from "react-timeago/lib/formatters/buildFormatter";
-
-// locales
-import deTA from "react-timeago/lib/language-strings/de";
-import enTA from "react-timeago/lib/language-strings/en";
-import esTA from "react-timeago/lib/language-strings/es";
-import frTA from "react-timeago/lib/language-strings/fr";
-
-export const defaultFormatter = (
-  value: number,
-  unit: string,
-  suffix: string
-): string => {
-  if (value !== 1) {
-    unit += "s";
-  }
-  return value + " " + unit + " " + suffix;
-};
-
-export let formatter: Formatter = defaultFormatter;
 
 export interface BundledLocales {
   [locale: string]: string;
@@ -62,9 +42,6 @@ export function negotiateLanguages(
     // missing keys.
     languages.push(data.fallbackLocale);
   }
-
-  // Create timeago formatter based on user locale
-  initializeFormatter(languages[0]);
 
   return languages;
 }
@@ -123,23 +100,4 @@ export async function generateMessages(
   }
 
   return await Promise.all(promises);
-}
-
-function getLocaleStrings(locale: string): LocaleDefinition {
-  switch (locale) {
-    case "fr":
-      return frTA;
-    case "de":
-      return deTA;
-    case "es":
-      return esTA;
-    default:
-      return enTA;
-  }
-}
-
-function initializeFormatter(locale: string): Formatter {
-  const localeStrings = getLocaleStrings(locale);
-  formatter = buildFormatter(localeStrings);
-  return formatter;
 }
