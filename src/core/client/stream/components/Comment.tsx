@@ -26,13 +26,6 @@ const Comment: StatelessComponent<CommentProps> = props => {
         {props.author && props.author.username}
       </Typography>
       <Timestamp date={props.createdAt} />
-      <br />
-      <Timestamp date={new Date().toISOString()} />
-      <br />
-      <Timestamp date={new Date("December 17, 1995 03:24:00").toISOString()} />
-      <br />
-      <Timestamp date={new Date("December 17, 2108 03:24:00").toISOString()} />
-      <br />
       <Typography>{props.body}</Typography>
     </div>
   );
