@@ -10,6 +10,16 @@ exports[`renders future date 1`] = `
 </time>
 `;
 
+exports[`renders now date 1`] = `
+<time
+  className="root"
+  dateTime="2018-07-05T20:56:23.484Z"
+  title="2018-07-05T20:56:23.484Z"
+>
+  0 seconds from now
+</time>
+`;
+
 exports[`renders old date 1`] = `
 <time
   className="root"

@@ -1,5 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
+
 import Timestamp from "./Timestamp";
 
 it("renders old date", () => {
