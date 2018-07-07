@@ -23,7 +23,7 @@ const { Provider, Consumer } = React.createContext<TalkContext>({} as any);
  */
 export const TalkContextConsumer = Consumer;
 
-/**s
+/**
  * In addition to just providing the context, TalkContextProvider also
  * renders the `LocalizationProvider` with the appropite data.
  */
